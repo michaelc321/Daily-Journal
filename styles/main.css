@@ -1,0 +1,12 @@
+.list__column,
+.form__1,
+.form__2,
+.form__3,
+.form__4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    width: 10%;
+}
