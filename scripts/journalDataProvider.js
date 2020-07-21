@@ -12,21 +12,21 @@ const journal = [
         id: 1,
         date: "07/24/2025",
         concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        entry: "HTML is the structure and CSS is the styling.",
         mood: "Ok"
     },
     {
-        id: 1,
+        id: 2,
         date: "07/24/2025",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        concept: "Javascript",
+        entry: "Functionality",
         mood: "Ok"
     },
     {
-        id: 1,
+        id: 3,
         date: "07/24/2025",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        concept: "Teamwork",
+        entry: "Good Planning",
         mood: "Ok"
     }
 ]
