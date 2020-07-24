@@ -13,10 +13,10 @@ const entryLog = document.querySelector(".records__entry")
 export const EntryListComponent = () => {
     // Use the journal entry data from the data provider component
     const entries = useJournalEntries()
-    let htmlRepresentation = ""
+    // let htmlRepresentation = ""
 
-    for (const entry of entries) {
-        htmlRepresentation += JournalEntryComponent(entry)
+    // for (const entry of entries) {
+    //     htmlRepresentation += JournalEntryComponent(entry)
         
         /*
             Invoke the component that returns an
@@ -24,7 +24,7 @@ export const EntryListComponent = () => {
         */
         entryLog.innerHTML += `
         <div> 
-            ${htmlRepresentation}
+            ${entries.map(entryObj => JournalEntryComponent(entryObj))}
         </div>
         `
     }
