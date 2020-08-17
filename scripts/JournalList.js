@@ -2,6 +2,7 @@
 import { getNotes, useNotes } from "./JournalProvider.js";
 import { noteHTMLConverter } from "./JournalHTML.js";
 import { useMood } from "./MoodProvider.js";
+import { useInstructor } from "./InstructorProvider.js";
 
 const contentTarget = document.querySelector(".show__notes")
 
@@ -9,15 +10,22 @@ const contentTarget = document.querySelector(".show__notes")
 
 const render = (noteArray) => {
    const moods = useMood()
+   const instructors = useInstructor()
 
     contentTarget.innerHTML = noteArray.reverse().map(
         (noteObj) => { 
+            const foundInstructor = instructors.find(
+                (instructObj) => {
+                    return instructObj.id === noteObj.instructorId
+                }
+            )
+            
             const foundMood = moods.find(
                 (moodObj) => {
                     return moodObj.id === noteObj.moodId
                 }
             )
-            return noteHTMLConverter(noteObj, foundMood)
+            return noteHTMLConverter(noteObj, foundMood, foundInstructor)
         }
     ).join("")
 }
