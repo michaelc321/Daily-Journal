@@ -1,0 +1,16 @@
+{
+"moods": [
+    {
+        "id": 1,
+        "label": "Ok"
+    },
+    {
+        "id": 2,
+        "label": "Verklempt"
+    },
+    {
+        "id": 3,
+        "label": "Awesome"
+    }
+]
+}
