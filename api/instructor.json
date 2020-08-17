@@ -1,0 +1,24 @@
+{
+    "instructor": [
+        {
+            "id": 1,
+            "first_name": "Mike",
+            "last_name": "Chisholm"
+        },
+        {
+            "id": 2,
+            "first_name": "Ariel",
+            "last_name": "Jordan"
+        },
+        {
+            "id": 3,
+            "first_name": "Alex",
+            "last_name": "Hanes"
+        },
+        {
+            "id": 4,
+            "first_name": "Igret",
+            "last_name": "Vonlichtenstien"
+        }
+    ]
+}

@@ -10,7 +10,8 @@
 #noteForm--title,
 #noteForm--name,
 #noteForm--mood,
-#noteForm--saveNote {
+#noteForm--saveNote,
+#noteForm--instructor {
     width: 19.3rem;
     height: 2rem;
 }
