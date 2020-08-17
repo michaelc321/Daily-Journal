@@ -1,28 +1,20 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "05/13/19",
-      "title": "Workshop",
-      "name": "HTML & CSS",
-      "text": "HTML is the structure and CSS is the styling.",
-      "mood": "Ok"
-    },
-    {
-      "date": "2020-08-03",
-      "title": "Good Job!",
-      "name": "Michael Chisholm",
-      "text": "Just figured out how to do this.",
-      "mood": "Happy",
-      "id": 2
+      "date": "",
+      "title": "",
+      "name": "",
+      "text": "",
+      "moodId": 3,
+      "id": 1
     },
     {
       "date": "",
-      "title": "Why do I need to refactor for the \"Mood\" option?",
-      "name": "Mike Chisholm",
-      "text": "It works fine how it is.",
-      "mood": "Help!",
-      "id": 3
+      "title": "",
+      "name": "",
+      "text": "",
+      "moodId": 2,
+      "id": 2
     }
   ]
 }

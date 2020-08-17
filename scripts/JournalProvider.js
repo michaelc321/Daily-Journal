@@ -10,7 +10,7 @@ const dispatchStateChangeEvent = () => {
 
 
 export const saveNote = (noteObj) => {
-    return fetch('http://localhost:3000/entries', {
+    return fetch('http://localhost:8088/entries?_expand=mood', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -27,7 +27,7 @@ export const useNotes = () => {
 }
 
 export const getNotes = () => {
-    return fetch('http://localhost:3000/entries')
+    return fetch('http://localhost:8088/entries?_expand=mood')
     .then(response => response.json())
     .then(parsedNotes => {
         notes = parsedNotes

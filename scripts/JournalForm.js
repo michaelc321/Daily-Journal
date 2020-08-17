@@ -1,4 +1,5 @@
-import { saveNote } from "./JournalProvider.js";
+import { saveNote, useNotes } from "./JournalProvider.js";
+import { useMood, getMood } from "./MoodProvider.js";
 
 const contentTarget = document.querySelector(".list__column")
 const eventHub = document.querySelector(".container")
@@ -12,6 +13,7 @@ eventHub.addEventListener("click", clickEvent => {
         const noteName = document.querySelector("#noteForm--name")
         const noteNotes = document.querySelector("#noteForm--notes")
         const noteMood = document.querySelector("#noteForm--mood")
+        const [prompt, moodId] = noteMood.value.split("--")
 
         // Make a new object representation of a note
         const newNote = {
@@ -19,7 +21,7 @@ eventHub.addEventListener("click", clickEvent => {
             title: noteTitle.value,
             name: noteName.value,
             text: noteNotes.value,
-            mood: noteMood.value
+            moodId: parseInt(moodId)
         }
 
         // Change API state and application state
@@ -27,7 +29,7 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
-const render = () => {
+const render = (allMoods) => {
     contentTarget.innerHTML = `
         <section class="entryForm">
         <form action="">
@@ -40,16 +42,24 @@ const render = () => {
             <input type="text" id="noteForm--name" placeholder="Your name here" />
             <textarea id="noteForm--notes" placeholder="Note text here"></textarea>
             <select id="noteForm--mood">
-                <option>Happy</option>
-                <option>Sad</option>
-                <option>Fine</option>
-                <option>Help!</option>
+                <option value="0">Select a Mood ...</option>
+                ${
+                    allMoods.map(
+                        (mood) => {
+                            return `<option value="mood--${ mood.id }">${ mood.label }</option>`
+                        }
+                    ).join("")
+                }
             </select>
             <button id="noteForm--saveNote">Save Note</button>
         </section>
     `
 }
 
-export const noteForm = () => {
-    render()
+export const NoteForm = () => {
+    getMood()
+        .then(() => {
+            const allMood = useMood()
+            render(allMood)
+        })
 }
