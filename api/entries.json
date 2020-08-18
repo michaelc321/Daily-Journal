@@ -1,13 +1,22 @@
 {
   "entries": [
     {
-      "date": "2020-08-18",
-      "title": "90%!",
-      "name": "Michael",
-      "text": "If 'null' it deactivates the show notes",
-      "moodId": 1,
-      "instructorId": 1,
+      "date": "",
+      "title": "",
+      "name": "",
+      "text": "",
+      "moodId": 3,
+      "instructorId": null,
       "id": 1
+    },
+    {
+      "date": "",
+      "title": "",
+      "name": "",
+      "text": "",
+      "moodId": 3,
+      "instructorId": 3,
+      "id": 2
     }
   ]
 }
