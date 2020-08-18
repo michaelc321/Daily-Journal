@@ -21,6 +21,15 @@ export const saveNote = (noteObj) => {
     .then(dispatchStateChangeEvent)
 }
 
+export const deleteNote = (noteId) => {
+    return fetch(`http://localhost:8088/entries/${noteId}` , {
+        method: "DELETE"
+    })
+        .then(response => response.json())
+        .then(getNotes)
+        .then(dispatchStateChangeEvent)
+}
+
 
 export const useNotes = () => {
     return notes.slice()
