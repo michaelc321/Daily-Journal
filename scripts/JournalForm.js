@@ -15,10 +15,11 @@ eventHub.addEventListener("click", clickEvent => {
         const noteNotes = document.querySelector("#noteForm--notes")
         const noteMood = document.querySelector("#noteForm--mood")
         const noteInstructor = document.querySelector("#noteForm--instructor")
-        const [prompt, moodId] = noteMood.value.split("--")
-        const [promptt, instructorId] = noteInstructor.value.split("--")
+        const moodId = parseInt(noteMood.value)
+        const instructorId = parseInt(noteInstructor.value)
 
         // Make a new object representation of a note
+if (moodId !== 0 && instructorId !== 0) {
         const newNote = {
             date: noteDate.value,
             title: noteTitle.value,
@@ -30,6 +31,9 @@ eventHub.addEventListener("click", clickEvent => {
 
         // Change API state and application state
         saveNote(newNote)
+    } else {
+        window.alert("Please choose an option in both dropdown menu's.")
+    }
     }
 })
 
@@ -39,7 +43,7 @@ const render = (allMoods, allInstructors) => {
         <form action="">
             <fieldset id="noteForm--date">
                 <label for="journalDate">Date of entry</label>
-                    <input type="date" name="journalDate" id="journalDate"></input>
+                    <input class="date" type="date" name="journalDate" id="journalDate"></input>
             </fieldset>
         </form>
             <input type="text" id="noteForm--title" placeholder="Enter note title" />
@@ -50,9 +54,9 @@ const render = (allMoods, allInstructors) => {
                 ${
                     allMoods.map(
                         (mood) => {
-                            return `<option value="mood--${ mood.id }">${ mood.label }</option>`
+                            return `<option value="${ mood.id }">${ mood.label }</option>`
                         }
-                    ).join("")
+                    )
                 }
             </select>
             <select id="noteForm--instructor">
@@ -60,12 +64,13 @@ const render = (allMoods, allInstructors) => {
             ${
                 allInstructors.map(
                     (instructor) => {
-                        return `<option value="instructor--${ instructor.id }">${ instructor.first_name } ${ instructor.last_name }</option>`
+                        return `<option value="${ instructor.id }">${ instructor.first_name } ${ instructor.last_name }</option>`
                     }
-                ).join("")
+                )
             }
         </select>
             <button id="noteForm--saveNote">Save Note</button>
+            <hr class="line">
         </section>
     `
 }
