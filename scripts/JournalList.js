@@ -51,6 +51,11 @@ export const NoteList = () => {
         })
 }
 
+// eventHub.addEventListener("noteStateChanged", () => {
+//     const newNotes = useNotes()
+//     render(newNotes)
+// })
+
 
 
 

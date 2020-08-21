@@ -1,19 +1,19 @@
 {
   "entries": [
     {
-      "date": "",
-      "title": "",
-      "name": "",
-      "text": "",
-      "moodId": 3,
-      "instructorId": null,
+      "date": "2020-08-21",
+      "title": "Got it!",
+      "name": "Michael Chisholm",
+      "text": "Finally! ",
+      "moodId": 2,
+      "instructorId": 4,
       "id": 1
     },
     {
-      "date": "",
-      "title": "",
-      "name": "",
-      "text": "",
+      "date": "2020-08-21",
+      "title": "Learn to style better!",
+      "name": "Michael Chisholm",
+      "text": "Look into more CSS concepts.",
       "moodId": 3,
       "instructorId": 3,
       "id": 2

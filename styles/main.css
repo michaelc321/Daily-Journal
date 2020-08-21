@@ -1,3 +1,17 @@
+.display {
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.line {
+    border: 20px dotted grey;
+    border-style: none none dotted;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
 .entryForm {
     display: flex;
     flex-direction: column;
@@ -5,7 +19,13 @@
 
 #noteForm--date {
     width: 18rem;
+    border-radius: 1rem;
 }
+
+.date {
+    background-color: lightblue;
+}
+
 
 #noteForm--title,
 #noteForm--name,
@@ -14,11 +34,23 @@
 #noteForm--instructor {
     width: 19.3rem;
     height: 2rem;
+    border-radius: 2rem;
+    margin-bottom: .2rem;
+    margin-top: .2rem;
+    background-color: lightblue;
+    border-color: goldenrod;
+}
+
+#noteForm--saveNote {
+    background-color: burlywood;
 }
 
 #noteForm--notes {
     width: 35rem;
     height: 10rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: lightblue;
 }
 
 .note {
